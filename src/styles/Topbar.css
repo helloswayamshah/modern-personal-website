@@ -1,0 +1,33 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 1% 0 0 1rem;
+    font-family: Audiowide, cursive;
+    font-size: 40px;
+}
+
+#dark, #default .logo {
+    color: white;
+}
+
+#light .logo {
+    color: black;
+}
+
+.theme-links{
+    margin: 1% 0 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.links button{
+    background-color: transparent;
+    border: none;
+}
+
