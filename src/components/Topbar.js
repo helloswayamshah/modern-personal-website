@@ -35,8 +35,8 @@ function Topbar( { props } ) {
                 <button onClick={() => {props.contact.current.scrollIntoView({ behavior: "smooth"})}}>Contact Me</button>
             </div>
             <div className="theme">
-                <button onClick={() => {setDark(true); setDefault(false)}}>Dark</button>
-                <button onClick={() => {setDark(false); setDefault(false)}}>Light</button>
+                <button id="dark-btn" onClick={() => {setDark(true); setDefault(false)}}>Dark</button>
+                <button id="light-btn" onClick={() => {setDark(false); setDefault(false)}}>Light</button>
             </div>
         </div>
     </div>

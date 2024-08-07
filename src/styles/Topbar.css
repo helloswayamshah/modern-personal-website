@@ -4,19 +4,30 @@
     justify-content: space-between;
 }
 
+/* Logo */
+
 .logo {
     margin: 1% 0 0 1rem;
     font-family: Audiowide, cursive;
     font-size: 40px;
 }
 
-#dark, #default .logo {
+.logo:hover {
+    cursor: pointer;
+}
+
+#dark .logo {
+    color: white;
+}
+
+#default .logo {
     color: white;
 }
 
 #light .logo {
     color: black;
 }
+
 
 .theme-links{
     margin: 1% 0 0 1rem;
@@ -26,8 +37,77 @@
     width: 40%;
 }
 
+/* Links for divs buttons*/
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
 .links button{
     background-color: transparent;
     border: none;
+    font-size: medium;
 }
 
+#dark .links button{
+    color: #FFFFFF8C;
+}
+
+#dark .links button:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#default .links button{
+    color: #FFFFFF8C;
+}
+
+#default .links button:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#light .links button{
+    color: 	#404040;
+    font-weight: normal;
+    transition: font-weight .5s ease-in-out;
+}
+
+#light .links button:hover{
+    font-weight: bold;
+}
+
+/*theme buttons*/
+.theme button{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.theme #dark-btn {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.theme #light-btn{
+    border-radius: 0 1rem 1rem 0;
+}
+
+#dark .theme button {
+    border-color: white;
+    color: white;
+}
+
+#default .theme button {
+    border-color: white;
+    color: white;
+}
+
+#light .theme button {
+    border-color: black;
+    color: black;
+}
