@@ -2,10 +2,12 @@ import './App.css';
 import Layout from './layout';
 
 function App() {
-  return (
+  return (<>
+    <title>Swayam Shah</title>
     <div className="App">
       <Layout />
     </div>
+    </>
   );
 }
 

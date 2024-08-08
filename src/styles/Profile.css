@@ -1,0 +1,117 @@
+.Profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 50%;
+}
+
+.imglogo {
+    min-width: 25%;
+    max-width: 40%;
+    height: auto;
+}
+
+.myimage {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 0;
+    animation: border-transform 10s linear infinite alternate forwards;
+    animation-name: border-transform;
+}
+
+@keyframes border-transform {
+    0%,
+  100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+
+.about-resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+}
+.nametxt {
+    font-family: Audiowide, cursive;
+    font-size: 80px;
+    text-align: left;
+}
+
+#dark .nametxt {
+    color: #ADB5BD;
+}
+
+#default .nametxt {
+    color: #ADB5BD;
+}
+
+#light .nametxt {
+    color: black;
+}
+
+.resume a {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 25px;   
+}
+
+#dark .resume a {
+    color: white;
+    border-color: white;
+}
+#dark .resume a:hover {
+    background-color: #6c757d;
+}
+
+#default .resume a {
+    color: white;
+    border-color: white;
+}
+#default .resume a:hover {
+    background-color: #6c757d;
+}
+
+#light .resume a{
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+#light .resume a:hover{
+    color: white;
+    font-weight: bold;
+    background-color: #6c757d;
+}

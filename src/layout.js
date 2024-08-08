@@ -6,6 +6,7 @@ import Topbar from "./components/Topbar";
 import Work from "./components/Work";
 import ContactMe from "./components/ContactMe";
 
+
 function Layout() {
     const profileRef = useRef(null);
     const educationRef = useRef(null);
@@ -18,11 +19,13 @@ function Layout() {
     return (
         <>
             <Topbar props = {divref}/>
-            <Profile ref={profileRef}/>
-            <Education ref={educationRef}/>
-            <Projects ref={projectsRef}/>
-            <Work ref={workRef}/>
-            <ContactMe ref={ContactRef}/>
+            <div className="layout">
+                <Profile ref={profileRef}/>
+                <Education ref={educationRef}/>
+                <Projects ref={projectsRef}/>
+                <Work ref={workRef}/>
+                <ContactMe ref={ContactRef}/>
+            </div>
         </>
         )
 }

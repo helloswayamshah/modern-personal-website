@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,19 +16,43 @@ code {
 
 @font-face {
   font-family: Audiowide;
-  src: url(../public/fonts/Audiowide-Regular.ttf);
+  src: url(../public/fonts/Audiowide/Audiowide-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../public/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+p {
+  text-align: left;
 }
 
 #default{
   background-color: #212529;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5rem;
+  color: #ADB5BD;
 }
 
 #dark {
   background-color: #212529;
   transition: 0.5s;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5rem;
+  color: #ADB5BD;
 }
 
 #light {
   background-color: white;
   transition: 0.5s;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5rem;
+  color: black;
 }
