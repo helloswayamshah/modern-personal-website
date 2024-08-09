@@ -20,7 +20,9 @@ function Topbar( { props } ) {
         document.documentElement.setAttribute("id", "default")
     }
 
-    return (<Navbar  sticky="top">
+    return (<Navbar expand= "lg" sticky="top" style={{
+        transition: "all 0.5s ease",
+    }}>
         <div className="topbar">
         <div className="logo" onClick={() => {props.profile.current.scrollIntoView({ behavior: "smooth"})}}>
             <h1 className="logo" >SS</h1>

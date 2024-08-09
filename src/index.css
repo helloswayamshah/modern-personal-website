@@ -24,8 +24,19 @@ code {
   src: url(../public/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf);
 }
 
-p {
+#default p {
   text-align: left;
+  color: #ADB5BD !important
+}
+
+#dark p {
+  text-align: left;
+  color: #ADB5BD !important
+}
+
+#light p {
+  text-align: left;
+  color: black !important
 }
 
 #default{
@@ -34,7 +45,7 @@ p {
   font-weight: 300;
   font-family: 'Inter', sans-serif;
   line-height: 1.5rem;
-  color: #ADB5BD;
+  color: white;
 }
 
 #dark {
@@ -44,7 +55,7 @@ p {
   font-weight: 300;
   font-family: 'Inter', sans-serif;
   line-height: 1.5rem;
-  color: #ADB5BD;
+  color: white;
 }
 
 #light {
@@ -55,4 +66,40 @@ p {
   font-family: 'Inter', sans-serif;
   line-height: 1.5rem;
   color: black;
+}
+
+.title {
+  font-family: "Audiowide", cursive;
+  font-weight: 38px;
+  color: white;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: auto;
+  width: 60%;
+}
+
+.card {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 8px 16px 8px 16px;
+}
+
+#default .card {
+  border-color: white;
+}
+
+#dark .card {
+  border-color: white;
+}
+
+#light .card {
+  border-color: black;
 }

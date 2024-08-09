@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Topbar from "./components/Topbar";
 import Work from "./components/Work";
 import ContactMe from "./components/ContactMe";
+import "./layout.css"
 
 
 function Layout() {
@@ -25,6 +26,7 @@ function Layout() {
                 <Projects ref={projectsRef}/>
                 <Work ref={workRef}/>
                 <ContactMe ref={ContactRef}/>
+                <div className="space"></div>
             </div>
         </>
         )
