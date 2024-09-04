@@ -24,6 +24,20 @@ code {
   src: url(../public/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf);
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 #default p {
   text-align: left;
   color: #ADB5BD !important
@@ -71,7 +85,18 @@ code {
 .title {
   font-family: "Audiowide", cursive;
   font-weight: 38px;
+}
+
+#default .title {
+  border-color: white;
+}
+
+#dark .title {
   color: white;
+}
+
+#light .title {
+  border-color: black;
 }
 
 .section {

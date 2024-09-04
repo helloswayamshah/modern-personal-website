@@ -1,0 +1,98 @@
+#project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 8px 16px;
+    margin: 1% 0 1% 0;
+    width: 100%;
+}
+
+#project-picture {
+    width: 33.33%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#project-details {
+    width: 33.33%;
+}
+
+#project-description {
+    width: 33.33%;
+}
+
+#project-details .links a{
+    display: flex;
+    margin: 5%;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px 2px 2px;
+}
+
+#default #project-details .links a{
+    border-color: white;
+}
+
+#dark #project-details .links a{
+    border-color: white;
+}
+
+#light #project-details .links a{
+    border-color: black;
+}
+
+#project-details .links #icon{
+    font-size: 1.5em;
+}
+
+#default #project-details .links #icon{
+    color: white;
+}
+
+#dark #project-details .links #icon{
+    color: white;
+}
+
+#light #project-details .links #icon{
+    color: black;
+}
+
+#default #project-details .links a:hover{
+    background-color: #6C757D;
+}
+
+#dark #project-details .links a:hover{
+    background-color: #6C757D;
+}
+
+#light #project-details .links a:hover{
+    background-color: #6C757D;
+    #icon {color: white;}
+}
+
+.badgeTech {
+    padding: 0.35em 0.65em 0.35em 0.65em;
+    width: fit-content;
+    margin: 1%;
+    font-weight: 700;
+    font-size: 0.75em;
+    border-radius: 0.375rem;
+}
+
+#default .badgeTech {
+    background-color: #6C757D;
+    color: white !important;
+}
+
+#dark .badgeTech {
+    background-color: #6C757D;
+    color: rgb(33, 28, 28) !important;
+}
+
+#light .badgeTech {
+    background-color: #6C757D;
+    color: white !important;
+}

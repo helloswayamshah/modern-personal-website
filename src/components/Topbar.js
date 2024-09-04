@@ -24,7 +24,8 @@ function Topbar( { props } ) {
         transition: "all 0.5s ease",
     }}>
         <div className="topbar">
-        <div className="logo" onClick={() => {props.profile.current.scrollIntoView({ behavior: "smooth"})}}>
+        <div className="logo" onClick={() => {const elem = document.querySelector(".topbar");
+            elem.scrollIntoView({ behavior: "smooth"});}}>
             <h1 className="logo" >SS</h1>
         </div>
 

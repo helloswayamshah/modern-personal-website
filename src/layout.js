@@ -15,7 +15,7 @@ function Layout() {
     const workRef = useRef(null);
     const ContactRef = useRef(null);
 
-    const divref = {profile: profileRef, education: educationRef, projects: profileRef, work: workRef, contact: ContactRef};
+    const divref = {profile: profileRef, education: educationRef, projects: projectsRef, work: workRef, contact: ContactRef};
 
     return (
         <>
