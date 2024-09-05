@@ -57,9 +57,11 @@ const ProjectCard = ({props}) => {
                     </div>
                 </div>
                 <div id='project-description'>
-                    {description.map((desc, index) => (
-                        <li>{desc}</li>
-                    ))}
+                    <ul>
+                        {description.map((desc, index) => (
+                            <li>{desc}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>
