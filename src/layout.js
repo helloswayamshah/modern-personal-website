@@ -26,7 +26,7 @@ function Layout() {
                 <Projects ref={projectsRef}/>
                 <Work ref={workRef}/>
                 <ContactMe ref={ContactRef}/>
-                <div className="space"></div>
+                {/* <div className="space"></div> */}
             </div>
         </>
         )

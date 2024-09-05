@@ -1,0 +1,42 @@
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: 0 0 0 0;
+    text-align: left;
+}
+
+.input {
+    resize: vertical;
+}
+
+#message {
+    min-height: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+
+.submit {
+    width: 10%;
+    margin-top: 1%;   
+}
+
+.message-sent {
+    animation: fade-out 3s;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
