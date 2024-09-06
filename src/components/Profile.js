@@ -7,7 +7,7 @@ function Profile(props, ref) {
     return (<div className="Profile-section" ref={ref}>
         <div className="profile-card">
             <div className="imglogo">
-                <img className="myimage" src={require("../assets/swayam.png")} alt="Swayam Shah"></img>
+                <img className="myimage" src={"./assets/swayam.png"} alt="Swayam Shah"></img>
             </div>
             <div className="about-resume">
             <div className="about">
@@ -16,7 +16,7 @@ function Profile(props, ref) {
                 <div className="information"><p>Hello! I am aspiring Software Engineering student studying Computer Science at University of California, Santa Cruz. I am an aspiring software engineer with a passion for problem-solving and building innovative solutions.</p></div>
             </div>
             <div className="resume">
-                    <a role="button" href={require("../assets/Resume.pdf")} target="_blank"><IoDownloadOutline /> Download Resume</a>
+                    <a role="button" href={"./assets/Resume.pdf"} target="_blank"><IoDownloadOutline /> Download Resume</a>
                 </div>
                 </div>
         </div>

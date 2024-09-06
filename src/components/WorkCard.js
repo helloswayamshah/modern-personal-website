@@ -7,7 +7,9 @@ const WorkCard = ({props}) => {
         <div className='card' id='work-card'>
             <div className='row'>
                 <div className='column' id='work-picture'>
-                    <img src = {props.companyImage} alt='work-image'></img>
+                    <div className='company-logo'>
+                        <img src = {props.companyImage} alt='work-image' id='work-image'/>
+                    </div>                
                     <span className='company-name'>{props.companyName}</span>
                 </div>
                 <div className='column' id='work-details'>
