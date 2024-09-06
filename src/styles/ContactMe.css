@@ -23,9 +23,85 @@
     margin: 0 0 0 0;
 }
 
+#name-label {
+    margin-top: 1em;
+}
+
+.form input {
+    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid;
+    border-color: #aeb5bd;
+    background-color: transparent;
+}
+
+#default .form input {
+    color: white;
+}
+
+#dark .form input {
+    color: white;
+}
+
+#light .form input {
+    color: black;
+}
+
+.form textarea {
+    margin-top: 0.5em;
+    border: 1px solid;
+    border-color: #aeb5bd;
+    background-color: transparent;
+}
+
+#default .form textarea {
+    color: white;
+}
+
+#dark .form textarea {
+    color: white;
+}
+
+#light .form textarea {
+    color: black;
+}
+
 .submit {
-    width: 10%;
-    margin-top: 1%;   
+    width: 7%;
+    margin-top: 1%;
+    padding: 0.5em;
+    border: 1px solid;
+    border-radius: 16px;
+}
+
+#default .submit {
+    color: white;
+    background-color: transparent;
+    border-color: #aeb5bd;
+}
+
+#dark .submit {
+    color: white;
+    background-color: transparent;
+    border-color: #aeb5bd;
+}
+
+#light .submit {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
+#default .submit:hover, #dark .submit:hover {
+    background-color: #aeb5bd;
+    color: white;
+    font-weight: bold;
+}
+
+#light .submit:hover {
+    background-color: #aeb5bd;
+    color: white;
+    font-weight: bold;
 }
 
 .message-sent {
@@ -39,4 +115,22 @@
     100% {
         opacity: 0;
     }
+}
+
+.socials #icon {
+    margin: 1em 1em 1em 1em;
+    height: 1.5em;
+    width: auto;
+}
+
+#default .socials #icon {
+    color: white;
+}
+
+#dark .socials #icon {
+    color: white;
+}
+
+#light .socials #icon {
+    color: black;
 }

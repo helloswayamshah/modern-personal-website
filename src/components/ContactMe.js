@@ -24,10 +24,24 @@ function ContactMe(props, ref) {
 
         axios({method: "post", url: "https://api.emailjs.com/api/v1.0/email/send", data: data, 
             headers: { 'Content-Type': 'application/json' }}).then((response) => { 
-                console.log("Email sent successfully!", response); 
-
-        }).catch((error) => { console.log("Error sending email!", error); });
-    }
+                const container = document.getElementsByClassName("contact-me")[0];
+                const element = document.createElement("div");
+                element.innerHTML = "Message sent successfully!"
+                element.id = "message-sent";
+                container.appendChild(element);
+                setTimeout(() => {
+                    container.removeChild(element);
+                }, 5000);
+            }).catch((error) => { 
+                const container = document.getElementsByClassName("contact-me")[0];
+                const element = document.createElement("div");
+                element.innerHTML = "Error sending email, please try again!"
+                element.id = "message-error";
+                container.appendChild(element);
+                setTimeout(() => {
+                    container.removeChild(element);
+                }, 5000); });
+        }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -45,14 +59,6 @@ function ContactMe(props, ref) {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
-        const container = document.getElementsByClassName("contact-me")[0];
-        const element = document.createElement("div");
-        element.innerHTML = "Message sent successfully!"
-        element.id = "message-sent";
-        container.appendChild(element);
-        setTimeout(() => {
-            container.removeChild(element);
-        }, 5000);
     }
 
     return (<div className="section" ref={ref}>
@@ -71,7 +77,7 @@ function ContactMe(props, ref) {
                     <button type="submit" className="submit" onClick={handleSubmit}>Send</button>
                 </form>
             </div>
-            My socials
+            <span><b>My socials</b></span>
             <div className="socials row">
                 <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
                 <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
