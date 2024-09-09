@@ -1,7 +1,7 @@
 #project-card {
     display: flex;
     flex-direction: column;
-    padding: 8px 16px 8px 16px;
+    padding: 16px 16px 16px 16px;
     margin: 1% 0 1% 0;
     width: 100%;
     animation: fade-in 2s;
@@ -9,6 +9,13 @@
 
 #project-picture {
     width: 30%;
+    height: auto;
+    border-radius: 10px;
+    animation: fade-in 2s;
+}
+
+#project-picture img{
+    width: 100%;
     height: auto;
     border-radius: 10px;
     animation: fade-in 2s;

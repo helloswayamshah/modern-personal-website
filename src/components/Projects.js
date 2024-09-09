@@ -12,9 +12,9 @@ function Projects(props, ref) {
     const [projects, setProjects] = useState([]);
 
     const fetchRepoInfo = async (repoName) => {
-        const octokit = new Octokit({auth: process.env.REACT_APP_GITHUB_API});
+        const octokit1 = new Octokit({auth: process.env.REACT_APP_GITHUB_API});
 
-        const response = await octokit.request('GET /repos/{owner}/{repo}', {
+        const response1 = await octokit1.request('GET /repos/{owner}/{repo}', {
             owner: 'helloswayamshah',
             repo: repoName, 
             headers: {
@@ -23,13 +23,35 @@ function Projects(props, ref) {
             }
         });
     
-        const name = response.data.name;
-        const description = response.data.description;
-        const startTime = response.data.created_at;
-        const endTime = response.data.pushed_at;
-        const tech = response.data.topics;
-        const githublink = response.data.html_url;
-        const websitelink = response.data.homepage;
+        const name = response1.data.name;
+        const description = response1.data.description;
+        const startTime = response1.data.created_at;
+        const endTime = response1.data.pushed_at;
+        const tech = response1.data.topics;
+        const githublink = response1.data.html_url;
+        const websitelink = response1.data.homepage;
+
+        var imagelink = "";
+
+        const octokit2 = new Octokit({auth: process.env.REACT_APP_GITHUB_API});
+        
+        try {
+            const response2 = await octokit2.request('GET /repos/{owner}/{repo}/contents/{path}', {
+                owner: 'helloswayamshah',
+                repo: repoName,
+                path: 'project-demo.png',
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28',
+                    'User-Agent': 'helloswayamshah'
+                }
+            });
+
+            imagelink = response2.data.download_url;
+                
+        } catch (error) {
+            console.error(error);
+        };
+
     
         const projectInfo = { 
             projectName: name, 
@@ -38,7 +60,8 @@ function Projects(props, ref) {
             endTime: endTime, 
             tech: tech, 
             githublink: githublink, 
-            websitelink: websitelink 
+            websitelink: websitelink,
+            imageSrc: imagelink
         };
     
         return projectInfo;
@@ -56,7 +79,6 @@ function Projects(props, ref) {
                 'User-Agent': 'helloswayamshah'
               }
         }).then( async (response) => {
-            console.log(response.data.length);
             for (let i = 0; i < response.data.length; i++) {
                 if (response.data[i].name === "helloswayamshah") {
                     continue;
@@ -69,7 +91,6 @@ function Projects(props, ref) {
 
     useEffect(() => {
         if (firstRender.current) {
-            console.log("Fetching Repos");
             fetchRepos();
             firstRender.current = false;
         }

@@ -15,11 +15,8 @@ const ProjectCard = ({props}) => {
     const eTime = new Date(props.endTime);
     const endYear = eTime.getFullYear();
     const endMonth = eTime.getMonth();
-    console.log(endMonth);
 
     let time = "";
-    console.log(props.projectName);
-    console.log(endMonth);
 
     if (srtMonth === endMonth && srtYear === endYear) {
         time = Months[srtMonth] + " " + srtYear;
@@ -37,7 +34,7 @@ const ProjectCard = ({props}) => {
         <div className='card' id='project-card'>
             <div className='row'>
                 <div id='project-picture'>
-                    <img src= {props.imageSrc} alt='project image'></img>
+                    <img src= {props.imageSrc} alt='project demo'></img>
                 </div>
                 <div className='column' id='project-details'>
                     <h5 className='ProjectName'>{props.projectName}</h5>
