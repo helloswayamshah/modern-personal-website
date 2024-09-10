@@ -7,7 +7,6 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 
 
-
 function Topbar( { props } ) {
 
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
@@ -59,21 +58,7 @@ function Topbar( { props } ) {
             </div>
         </div>}
         
-        {(isMobile || isSmallTablet || isTabletScreen) && isPotrait && 
-        <div className="link-theme-dropdown">
-            <button className="dropdown-btn" onClick={handleShow}><RxHamburgerMenu id="hamburger-icon" /></button>
-            
-            <Offcanvas show={show} onHide={handleClose} placement="end" backdrop="static">
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas>
-        </div>
-        }
+        {(isMobile || isSmallTablet || isTabletScreen) && isPotrait && <div className="hamburger-menu"></div>}
 
     </div>
     </Navbar>)

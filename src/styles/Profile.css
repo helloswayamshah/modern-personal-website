@@ -115,3 +115,92 @@
     font-weight: bold;
     background-color: #6c757d;
 }
+
+/* MOBILE STYLES */
+
+.mobile-profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 80%;
+}
+
+.mobile-imglogo {
+    min-width: 65%;
+    max-width: 80%;
+    height: auto;
+}
+
+.mobile-myimage {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 0;
+    animation: border-transform 10s linear infinite alternate forwards;
+    animation-name: border-transform;
+}
+
+.mobile-about-resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+}
+.mobile-nametxt {
+    font-family: Audiowide, cursive;
+    font-size: 60px;
+    text-align: center;
+}
+
+.mobile-information {
+    margin: 0 0 5% 0;
+}
+
+#dark .mobile-nametxt {
+    color: #ADB5BD;
+}
+
+#default .mobile-nametxt {
+    color: #ADB5BD;
+}
+
+#light .mobile-nametxt {
+    color: black;
+}
+
+.mobile-resume a {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 25px;   
+}
+
+#dark .mobile-resume a {
+    color: white;
+    border-color: white;
+}
+#dark .mobile-resume a:hover {
+    background-color: #6c757d;
+}
+
+#default .mobile-resume a {
+    color: white;
+    border-color: white;
+}
+#default .mobile-resume a:hover {
+    background-color: #6c757d;
+}
+
+#light .mobile-resume a{
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+#light .mobile-resume a:hover{
+    color: white;
+    font-weight: bold;
+    background-color: #6c757d;
+}
