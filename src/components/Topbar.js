@@ -30,7 +30,7 @@ function Topbar( { props } ) {
     }
 
     $(document).ready(function() {
-        $(window).scr9oll(function() {
+        $(window).scroll(function() {
             var scroll = $(window).scrollTop();
 
             if (scroll > 50) {
