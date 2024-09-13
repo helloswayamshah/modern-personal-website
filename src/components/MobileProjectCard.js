@@ -28,7 +28,7 @@ const MobileProjectCard = ({props}) => {
 
     let description = [];
     if (props.desc !== null) {
-        description = props.desc.split("\n");
+        description = props.desc.split(".");
     }
     return (
         <div className='mobile-card' id='mobile-project-card'>
