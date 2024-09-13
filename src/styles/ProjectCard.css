@@ -112,7 +112,7 @@
 }
 
 .badgeTech {
-    display: block;
+    flex-wrap: wrap;
     padding: 0.35em 0.65em 0.35em 0.65em;
     width:fit-content;
     margin: 1%;

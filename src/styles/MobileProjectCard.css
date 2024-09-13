@@ -109,12 +109,14 @@
 
 .mobile-tech {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 0 2.5% 0;
 }
 
 .mobile-badgeTech {
+    flex-wrap: wrap;
     padding: 0.35em 0.65em 0.35em 0.65em;
     width: fit-content;
     margin: 1%;
