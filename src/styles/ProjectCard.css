@@ -105,14 +105,16 @@
 
 .tech {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 0 2.5% 0;
 }
 
 .badgeTech {
+    display: block;
     padding: 0.35em 0.65em 0.35em 0.65em;
-    width: fit-content;
+    width:fit-content;
     margin: 1%;
     font-weight: 700;
     font-size: 0.75em;
