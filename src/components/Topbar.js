@@ -5,6 +5,7 @@ import { useMediaQuery} from "react-responsive";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import $ from "jquery";
+import { IoMdClose } from "react-icons/io";
 
 
 function Topbar( { props } ) {
@@ -45,8 +46,8 @@ function Topbar( { props } ) {
     });
     
     const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true); 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     return (<Navbar expand= "lg" className="navbar" style={{
         transition: "all 0.5s ease",
@@ -56,8 +57,8 @@ function Topbar( { props } ) {
             elem.scrollIntoView({ behavior: "smooth"});}}>
             <h1 className="logo" >SS</h1>
         </div>
-        {(isDesktopOrLaptop || isSmallerScreen || !isPotrait) &&
-        <div className="link-section">
+        {(isDesktopOrLaptop || isSmallerScreen || !isPotrait) ?
+        (<div className="link-section">
             <div className="theme-links">
                 <div className="links">
                     <button onClick={() => {props.profile.current.scrollIntoView({ behavior: "smooth"})}}>Home</button>
@@ -71,10 +72,53 @@ function Topbar( { props } ) {
                     <button id="light-btn" onClick={() => {setDark(false); setDefault(false)}}>Light</button>
                 </div>
             </div>
-        </div>}
-        
-        {(isMobile || isSmallTablet || isTabletScreen) && isPotrait && <div className="hamburger-menu"></div>}
-
+        </div>) :((isMobile || isSmallTablet || isTabletScreen) && isPotrait) ? 
+        (<div className="hamburger-menu">
+            <RxHamburgerMenu className="menu" onClick={handleShow} />
+            
+            <Offcanvas className="offcanvas" show={show} onHide={handleClose} placement="end">
+                <Offcanvas.Header className="offcanvas-head">
+                    <Offcanvas.Title className="title">Menu</Offcanvas.Title>
+                    <button className="close" onClick={handleClose}><IoMdClose /></button>
+                </Offcanvas.Header>
+                <Offcanvas.Body className="offcanvas-body">
+                    <div className="offcanvas-links">
+                        <button onClick={() => {props.profile.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Home</button>
+                        <button onClick={() => {props.education.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Education</button>
+                        <button onClick={() => {props.projects.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Projects</button>
+                        <button onClick={() => {props.work.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Work Experience</button>
+                        <button onClick={() => {props.contact.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Contact Me</button>
+                    </div>
+                    <div className="theme">
+                        <button id="dark-btn" onClick={() => {setDark(true); setDefault(false); handleClose()}}>Dark</button>
+                        <button id="light-btn" onClick={() => {setDark(false); setDefault(false); handleClose()}}>Light</button>
+                    </div>
+                </Offcanvas.Body>
+            </Offcanvas>
+    </div>) : 
+        (<div className="hamburger-menu">
+            <RxHamburgerMenu className="menu" onClick={handleShow} />
+            
+            <Offcanvas className="offcanvas" show={show} onHide={handleClose} placement="end">
+                <Offcanvas.Header className="offcanvas-head">
+                    <Offcanvas.Title className="title">Menu</Offcanvas.Title>
+                    <button className="close" onClick={handleClose}><IoMdClose /></button>
+                </Offcanvas.Header>
+                <Offcanvas.Body className="offcanvas-body">
+                    <div className="offcanvas-links">
+                        <button onClick={() => {props.profile.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Home</button>
+                        <button onClick={() => {props.education.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Education</button>
+                        <button onClick={() => {props.projects.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Projects</button>
+                        <button onClick={() => {props.work.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Work Experience</button>
+                        <button onClick={() => {props.contact.current.scrollIntoView({ behavior: "smooth"}); handleClose()}}>Contact Me</button>
+                    </div>
+                    <div className="theme">
+                        <button id="dark-btn" onClick={() => {setDark(true); setDefault(false); handleClose()}}>Dark</button>
+                        <button id="light-btn" onClick={() => {setDark(false); setDefault(false); handleClose()}}>Light</button>
+                    </div>
+                </Offcanvas.Body>
+            </Offcanvas>
+    </div>)}
     </div>
     </Navbar>)
 }

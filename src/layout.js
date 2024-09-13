@@ -18,7 +18,7 @@ function Layout() {
     const divref = {profile: profileRef, education: educationRef, projects: projectsRef, work: workRef, contact: ContactRef};
 
     return (
-        <>
+        <div className="main-layout">
             <Topbar props = {divref}/>
             <div className="layout">
                 <Profile ref={profileRef}/>
@@ -28,7 +28,7 @@ function Layout() {
                 <ContactMe ref={ContactRef}/>
                 {/* <div className="space"></div> */}
             </div>
-        </>
+        </div>
         )
 }
 

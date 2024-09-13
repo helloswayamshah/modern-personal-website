@@ -136,3 +136,120 @@
     border-color: black;
     color: black;
 }
+
+/* Mobile Styles */
+#default .offcanvas{
+    background-color: #2e3339;
+}
+
+#dark .offcanvas{
+    background-color: #2e3339;
+}
+
+#light .offcanvas{
+    background-color: #d8d8d8;
+}
+
+#default .title{
+    color: white;
+}
+
+#dark .title{
+    color: white;
+}
+
+#light .title{
+    color: black;
+}
+
+.offcanvas-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.offcanvas-head button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    margin: 0 1% 0 1%;
+}
+
+#default .offcanvas-head button {
+    color: white;
+}
+
+#dark .offcanvas-head button {
+    color: white;
+}
+
+#light .offcanvas-head button {
+    color: black;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.offcanvas-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.offcanvas-links button {
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+    margin: 1% 1% 1% 1%;
+}
+
+#dark .offcanvas-links button{
+    color: #FFFFFF8C;
+}
+
+#dark .offcanvas-links button:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#default .offcanvas-links button{
+    color: #FFFFFF8C;
+}
+#default .offcanvas-links button:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#light .offcanvas-links button{
+    color: 	#404040;
+    font-weight: normal;
+    transition: font-weight .5s ease-in-out;
+}
+
+#light .offcanvas-links button:hover{
+    font-weight: bold;
+}
+
+#default .menu{
+    size: 1.5em;
+    border: 2px solid #404040;
+    border-radius: 2px;
+    padding: 5% 10% 5% 10%;
+}
+
+#dark .menu {
+    size: 1.5em;
+    border: 2px solid #404040;
+    border-radius: 2px;
+    padding: 5% 10% 5% 10%;
+
+}
+
+#light .menu {
+    size: 1.5em;
+    border: 2px solid #404040;
+    border-radius: 2px;
+    padding: 5% 10% 5% 10%;
+}

@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$body-bg: #222529;
+$body-color: white;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/offcanvas"
