@@ -134,3 +134,151 @@
 #light .socials #icon {
     color: black;
 }
+
+/* Mobile Styles */
+#mobile-contact-section {
+    width: 98%;
+    margin: 0 1% 0 1%;
+}
+
+.mobile-contact-me-message {
+    text-align: left;
+}
+
+.mobile-contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: 0 0 0 0;
+    text-align: left;
+}
+
+.input {
+    resize: vertical;
+}
+
+#message {
+    min-height: 50px;
+}
+
+.mobile-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+
+#mobile-name-label {
+    margin-top: 1em;
+}
+
+.mobile-form input {
+    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid;
+    border-color: #aeb5bd;
+    background-color: transparent;
+}
+
+#default .mobile-form input {
+    color: white;
+}
+
+#dark .mobile-form input {
+    color: white;
+}
+
+#light .mobile-form input {
+    color: black;
+}
+
+.mobile-form textarea {
+    margin-top: 0.5em;
+    border: 1px solid;
+    border-color: #aeb5bd;
+    background-color: transparent;
+}
+
+#default .mobile-form textarea {
+    color: white;
+}
+
+#dark .mobile-form textarea {
+    color: white;
+}
+
+#light .mobile-form textarea {
+    color: black;
+}
+
+.mobile-submit {
+    width: 15%;
+    margin-top: 2%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid;
+    border-radius: 16px;
+}
+
+#default .mobile-submit {
+    color: white;
+    background-color: transparent;
+    border-color: #aeb5bd;
+}
+
+#dark .mobile-submit {
+    color: white;
+    background-color: transparent;
+    border-color: #aeb5bd;
+}
+
+#light .mobile-submit {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
+#default .mobile-submit:hover, #dark .mobile-submit:hover {
+    background-color: #aeb5bd;
+    color: white;
+    font-weight: bold;
+}
+
+#light .mobile-submit:hover {
+    background-color: #aeb5bd;
+    color: white;
+    font-weight: bold;
+}
+
+.message-sent {
+    animation: fade-out 3s;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.mobile-socials-row #icon {
+    margin: 1em 1em 1em 1em;
+    height: 1.5em;
+    width: auto;
+}
+
+#default .mobile-socials-row #icon {
+    color: white;
+}
+
+#dark .mobile-socials-row #icon {
+    color: white;
+}
+
+#light .mobile-socials-row #icon {
+    color: black;
+}

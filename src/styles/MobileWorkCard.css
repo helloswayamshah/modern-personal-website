@@ -1,0 +1,65 @@
+#mobile-work-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 8px 16px;
+    margin: 1% 0 1% 0;
+    width: 100%;
+    animation: fade-in 2s;
+}
+
+.mobile-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#mobile-work-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    animation: fade-in 2s;
+}
+
+#mobile-work-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#mobile-work-description {
+    width: 100%;
+}
+
+.mobile-company-name {
+    font-size: 1rem !important;
+    font-weight: 700;
+}
+
+.mobile-company-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1% 0 1% 0;
+
+}
+
+#mobile-work-image {
+    width: 100%;
+    height: auto;
+}
+
+.mobile-workName {
+    font-weight: 700 !important;
+    font-size: 1.25em !important;
+}

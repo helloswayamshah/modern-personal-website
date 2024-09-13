@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/ProjectCard.css';
+import '../styles/MobileProjectCard.css';
 import { IoLogoGithub } from 'react-icons/io5';
 import { IoIosLink } from "react-icons/io";
 import '../index.css';
 
-const ProjectCard = ({props}) => {
+const MobileProjectCard = ({props}) => {
 
     const Months = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
@@ -31,22 +31,22 @@ const ProjectCard = ({props}) => {
         description = props.desc.split("\n");
     }
     return (
-        <div className='card' id='project-card'>
-            <div className='row'>
-                <div id='project-picture'>
+        <div className='mobile-card' id='mobile-project-card'>
+            <div className='column'>
+                <div id='mobile-project-picture'>
                 {(props.imageSrc !== null && props.imageSrc !== "") ? 
-                (<img src= {props.imageSrc} alt='project demo'></img>) : <></> } 
+                (<img src= {props.imageSrc} alt='project demo'></img>) : <></> }
                 </div>
-                <div className='column' id='project-details'>
-                    <h5 className='ProjectName'>{props.projectName}</h5>
-                    <h7 className='time'>{time}</h7>
-                    <div className='tech'>
+                <div className='column' id='mobile-project-details'>
+                    <h5 className='mobile-ProjectName'>{props.projectName}</h5>
+                    <h7 className='mobile-time'>{time}</h7>
+                    <div className='mobile-tech'>
                         {props.tech.map((techItem, index) => (
-                            <span className='badgeTech'>{techItem}</span>
+                            <span className='mobile-badgeTech'>{techItem}</span>
                         ))}
                     </div>
 
-                    <div className='links'>
+                    <div className='row mobile-links'>
                         <a id='github-link' href={props.githublink} target='_blank' rel='noreferrer'><IoLogoGithub id='icon'/></a>
 
                         {props.websitelink !== "" && props.websitelink !== null &&(
@@ -54,7 +54,7 @@ const ProjectCard = ({props}) => {
                         )}
                     </div>
                 </div>
-                <div id='project-description'>
+                <div id='mobile-project-description'>
                     <ul>
                         {description.map((desc, index) => (
                             <li>{desc}</li>
@@ -66,4 +66,4 @@ const ProjectCard = ({props}) => {
     );
 };
 
-export default ProjectCard;
+export default MobileProjectCard;

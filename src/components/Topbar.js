@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMediaQuery} from "react-responsive";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import jQuery from "jquery";
 
 
 function Topbar( { props } ) {
@@ -29,11 +29,24 @@ function Topbar( { props } ) {
         document.documentElement.setAttribute("id", "default")
     }
 
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("scroll", function() {
+            var scroll = this.window.scrollY;
+
+            if (scroll > 200) {
+                document.querySelector(".navbar").classList.add("scrolled");
+            }
+            else {
+                document.querySelector(".navbar").classList.remove("scrolled");
+            }
+        });
+    });
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    return (<Navbar expand= "lg" sticky="top" style={{
+    return (<Navbar expand= "lg" className="navbar" style={{
         transition: "all 0.5s ease",
     }}>
         <div className="topbar">

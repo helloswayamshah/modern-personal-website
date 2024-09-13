@@ -89,7 +89,7 @@ code {
 }
 
 #default .title {
-  border-color: white;
+  color: white;
 }
 
 #dark .title {
@@ -97,7 +97,7 @@ code {
 }
 
 #light .title {
-  border-color: black;
+  color: black;
 }
 
 .section {
@@ -129,6 +129,55 @@ code {
 }
 
 #light .card {
+  border-color: black;
+}
+
+/*Mobile Styles*/
+.mobile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  animation: fade-in 5s;
+}
+
+.mobile-title {
+  font-family: "Audiowide", cursive;
+  font-weight: 38px;
+}
+
+#default .mobile-title {
+  color: white;
+}
+
+#dark .mobile-title {
+  color: white;
+}
+
+#light .mobile-title {
+  color: black;
+}
+
+.mobile-card {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 8px 16px 8px 16px;
+  animation: fade-in 5s;
+}
+
+#default .mobile-card {
+  border-color: white;
+}
+
+#dark .mobile-card {
+  border-color: white;
+}
+
+#light .mobile-card {
   border-color: black;
 }
 

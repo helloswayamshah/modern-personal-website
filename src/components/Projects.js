@@ -4,8 +4,17 @@ import "../styles/Projects.css"
 import { Octokit } from "octokit";
 import ProjectCard from "./ProjectCard";
 import '../index.css';
+import { useMediaQuery } from 'react-responsive';
+import MobileProjectCard from "./MobileProjectCard";
 
 function Projects(props, ref) {
+
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
+    const isSmallerScreen = useMediaQuery({ query: '(min-width: 992px)' });
+    const isTabletScreen = useMediaQuery({ query: '(min-width: 768px)' });
+    const isSmallTablet = useMediaQuery({ query: '(min-width: 601px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const isPotrait = useMediaQuery({ query: '(orientation: portrait)' });
     
     const firstRender = useRef(true);
 
@@ -102,14 +111,32 @@ function Projects(props, ref) {
         return bTime - aTime;
     });
 
-    return (<div className="section" id='project-section' ref={ref}>
-            <h1 className="title">Projects</h1>
-            <div id="projects">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} props={project}/>
-                ))}
-            </div>
-        </div>)
+    return (isDesktopOrLaptop || isSmallerScreen || !isPotrait) ? (
+            <div className="section" id='project-section' ref={ref}>
+                <h1 className="title">Projects</h1>
+                <div id="projects">
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} props={project}/>
+                    ))}
+                </div>
+            </div>) : ((isMobile || isSmallTablet || isTabletScreen) && isPotrait) ? (
+                <div className="mobile-section" id="mobile-project-section" ref={ref}>
+                    <h1 className="mobile-title">Projects</h1>
+                    <div id="mobile-projects">
+                        {projects.map((project, index) => (
+                        <MobileProjectCard key={index} props={project}/>
+                        ))}
+                    </div>
+                </div>
+            ) : (<div className="mobile-section" id="mobile-project-section" ref={ref}>
+                <h1 className="mobile-title">Projects</h1>
+                <div id="mobile-projects">
+                    {projects.map((project, index) => (
+                    <MobileProjectCard key={index} props={project}/>
+                    ))}
+                </div>
+            </div>)
+        
 }
 
 export default forwardRef(Projects);

@@ -1,4 +1,4 @@
-#project-card {
+#mobile-project-card {
     display: flex;
     flex-direction: column;
     padding: 16px 16px 16px 16px;
@@ -7,51 +7,55 @@
     animation: fade-in 2s;
 }
 
-#project-picture {
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
-    animation: fade-in 2s;
-}
-
-#project-picture img{
+#mobile-project-picture {
     width: 100%;
     height: auto;
     border-radius: 10px;
     animation: fade-in 2s;
 }
 
-#project-details {
-    width: 30%;
+#mobile-project-picture img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fade-in 2s;
+}
+
+#mobile-project-details {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+    margin: 5% 0 0 0;
 }
 
-#project-description {
-    width: 40%;
+#mobile-project-description {
+    width: 100%;
 }
 
-.ProjectName {
+.mobile-ProjectName {
+    font-size: 1.25rem !important;
+    font-weight: 500;
     margin: 2.5% 0 2.5% 0;
 }
 
-.time {
+.mobile-time {
     margin: 2.5% 0 2.5% 0;
 }
 
-#project-details .links {
+#mobile-project-details .mobile-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 2.5% 0 2.5% 0;
+    margin: 2.5% 0 0 0;
 }
 
-#project-details .links a{
+#mobile-project-details .mobile-links a{
+    margin: 0 2% 0 2%;
     display: flex;
     border: 1px solid;
     border-radius: 50%;
@@ -62,55 +66,55 @@
     padding: 2px 2px 2px 2px;
 }
 
-#default #project-details .links a{
+#default #mobile-project-details .mobile-links a{
     border-color: white;
 }
 
-#dark #project-details .links a{
+#dark #mobile-project-details .mobile-links a{
     border-color: white;
 }
 
-#light #project-details .links a{
+#light #mobile-project-details .mobile-links a{
     border-color: black;
 }
 
-#project-details .links #icon{
+#mobile-project-details .mobile-links #icon{
     font-size: 1.5em;
 }
 
-#default #project-details .links #icon{
+#default #mobile-project-details .mobile-links #icon{
     color: white;
 }
 
-#dark #project-details .links #icon{
+#dark #mobile-project-details .mobile-links #icon{
     color: white;
 }
 
-#light #project-details .links #icon{
+#light #mobile-project-details .mobile-links #icon{
     color: black;
 }
 
-#default #project-details .links a:hover{
+#default #mobile-project-details .mobile-links a:hover{
     background-color: #6C757D;
 }
 
-#dark #project-details .links a:hover{
+#dark #mobile-project-details .mobile-links a:hover{
     background-color: #6C757D;
 }
 
-#light #project-details .links a:hover{
+#light #mobile-project-details .mobile-links a:hover{
     background-color: #6C757D;
     #icon {color: white;}
 }
 
-.tech {
+.mobile-tech {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 2.5% 0;
 }
 
-.badgeTech {
+.mobile-badgeTech {
     padding: 0.35em 0.65em 0.35em 0.65em;
     width: fit-content;
     margin: 1%;
@@ -119,17 +123,17 @@
     border-radius: 0.375rem;
 }
 
-#default .badgeTech {
+#default .mobile-badgeTech {
     background-color: #6C757D;
     color: white !important;
 }
 
-#dark .badgeTech {
+#dark .mobile-badgeTech {
     background-color: #6C757D;
     color: white !important;
 }
 
-#light .badgeTech {
+#light .mobile-badgeTech {
     background-color: #6C757D;
     color: white !important;
 }

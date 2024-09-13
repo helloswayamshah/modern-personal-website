@@ -6,8 +6,16 @@ import { FaDiscord } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
 import "../index.css"
 import axios from "axios";
+import { useMediaQuery } from 'react-responsive';
 
 function ContactMe(props, ref) {
+
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
+    const isSmallerScreen = useMediaQuery({ query: '(min-width: 992px)' });
+    const isTabletScreen = useMediaQuery({ query: '(min-width: 768px)' });
+    const isSmallTablet = useMediaQuery({ query: '(min-width: 601px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const isPotrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     const sendEmail = (name, email, message) => {
         var data = {
@@ -61,32 +69,93 @@ function ContactMe(props, ref) {
         document.getElementById("message").value = "";
     }
 
-    return (<div className="section" ref={ref}>
-        <h1 className="title">Contact Me</h1>
-        <div className="contact column">
-            <div className="contact-me">
-                <span className="contact-me-message">Hello there! I believe that every interaction holds the potential to spark creativity, forge new partnerships, and foster a genuine exchange of ideas. 
-                    So, whether you're a fellow enthusiast in the same field, an aspiring artist, a tech wizard, or just someone looking to explore new horizons, don't hesitate to reach out! Reach me out through any of the mediums below.</span>
-                <form className="form">
-                    <label className="form-label" id="name-label">Name</label>
-                    <input type="text" placeholder="Name" className="input card" id="name" required></input>
-                    <label className="form-label" id="email-label">Email</label>
-                    <input type="email" placeholder="Email" className="input card" id="email" required></input>
-                    <label className="form-label" id="message-label">Message</label>
-                    <textarea placeholder="Message" className="input card" id="message" required></textarea>
-                    <button type="submit" className="submit" onClick={handleSubmit}>Send</button>
-                </form>
+    return (isDesktopOrLaptop || isSmallerScreen || !isPotrait) ? (
+            <div className="section" ref={ref}>
+                <h1 className="title">Contact Me</h1>
+                <div className="contact column">
+                <div className="contact-me">
+                    <span className="contact-me-message">Hello there! I believe that every interaction holds the potential to spark creativity, forge new partnerships, and foster a genuine exchange of ideas. 
+                        So, whether you're a fellow enthusiast in the same field, an aspiring artist, a tech wizard, or just someone looking to explore new horizons, don't hesitate to reach out! Reach me out through any of the mediums below.</span>
+                    <form className="form">
+                        <label className="form-label" id="name-label">Name</label>
+                        <input type="text" placeholder="Name" className="input card" id="name" required></input>
+                        <label className="form-label" id="email-label">Email</label>
+                        <input type="email" placeholder="Email" className="input card" id="email" required></input>
+                        <label className="form-label" id="message-label">Message</label>
+                        <textarea placeholder="Message" className="input card" id="message" required></textarea>
+                        <button type="submit" className="submit" onClick={handleSubmit}>Send</button>
+                    </form>
+                </div>
+                <span><b>My socials</b></span>
+                <div className="socials row">
+                    <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
+                    <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
+                    <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
+                    <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
+                    <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                </div>
             </div>
-            <span><b>My socials</b></span>
-            <div className="socials row">
-                <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
-                <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
-                <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
-                <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
-                <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+        </div>) : ((isMobile || isSmallTablet || isTabletScreen) && isPotrait) ? (
+            <div className="section" id="mobile-contact-section" ref={ref}>
+                <h1 className="title">Contact Me</h1>
+                <div className="mobile-contact column">
+                    <div className="mobile-contact-me">
+                        <span className="mobile-contact-me-message">Hello there! I believe that every interaction holds the potential to spark creativity, 
+                                                                    forge new partnerships, and foster a genuine exchange of ideas. So, whether you're a 
+                                                                    fellow enthusiast in the same field, an aspiring artist, a tech wizard, or just someone 
+                                                                    looking to explore new horizons, don't hesitate to reach out! Reach me out through any 
+                                                                    of the mediums below.</span>
+                        <form className="mobile-form">
+                            <label className="form-label" id="mobile-name-label">Name</label>
+                            <input type="text" placeholder="Name" className="input card" id="name" required></input>
+                            <label className="form-label" id="email-label">Email</label>
+                            <input type="email" placeholder="Email" className="input card" id="email" required></input>
+                            <label className="form-label" id="message-label">Message</label>
+                            <textarea placeholder="Message" className="input card" id="message" required></textarea>
+                            <button type="submit" className="mobile-submit" onClick={handleSubmit}>Send</button>
+                        </form>
+                    </div>
+                    <span><b>My socials</b></span>
+                    <div className="mobile-socials-row">
+                        <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
+                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
+                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
+                        <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
+                        <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>)
+        ) : (
+            <div className="section" id="mobile-contact-section" ref={ref}>
+                <h1 className="title">Contact Me</h1>
+                <div className="mobile-contact column">
+                    <div className="mobile-contact-me">
+                        <span className="mobile-contact-me-message">Hello there! I believe that every interaction holds the potential to spark creativity, 
+                                                                    forge new partnerships, and foster a genuine exchange of ideas. So, whether you're a 
+                                                                    fellow enthusiast in the same field, an aspiring artist, a tech wizard, or just someone 
+                                                                    looking to explore new horizons, don't hesitate to reach out! Reach me out through any 
+                                                                    of the mediums below.</span>
+                        <form className="mobile-form">
+                            <label className="form-label" id="mobile-name-label">Name</label>
+                            <input type="text" placeholder="Name" className="input card" id="name" required></input>
+                            <label className="form-label" id="email-label">Email</label>
+                            <input type="email" placeholder="Email" className="input card" id="email" required></input>
+                            <label className="form-label" id="message-label">Message</label>
+                            <textarea placeholder="Message" className="input card" id="message" required></textarea>
+                            <button type="submit" className="mobile-submit" onClick={handleSubmit}>Send</button>
+                        </form>
+                    </div>
+                    <span><b>My socials</b></span>
+                    <div className="mobile-socials-row">
+                        <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
+                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
+                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
+                        <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
+                        <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                    </div>
+                </div>
+            </div>
+        )
 }
 
 export default forwardRef(ContactMe);
