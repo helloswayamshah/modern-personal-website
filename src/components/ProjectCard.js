@@ -57,7 +57,8 @@ const ProjectCard = ({props}) => {
                 <div id='project-description'>
                     <ul>
                         {description.map((desc, index) => (
-                            <li>{desc}</li>
+                            (desc != "") ?
+                        <li>{desc}.</li> : <></>
                         ))}
                     </ul>
                 </div>
