@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMediaQuery} from "react-responsive";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import jQuery from "jquery";
+import $ from "jquery";
 
 
 function Topbar( { props } ) {
