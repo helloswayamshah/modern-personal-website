@@ -65,7 +65,7 @@ function Education(props, ref) {
                     </div>
     
                     <li><b>GPA: </b> {GPA}</li>
-                    <li>Dean's List 2023-2024</li>
+                    <li>{deansList}</li>
                 </div>
             </div>)
 }
