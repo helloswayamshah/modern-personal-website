@@ -15,7 +15,7 @@ function Education(props, ref) {
     const isPotrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     const GPA = 3.8;
-    const deansList = 'Dean''s List 2022-2024';
+    const deansList = 'Dean\'s List 2022-2024';
 
     return (isDesktopOrLaptop || isSmallerScreen || !isPotrait) ? (
             <div className="section" ref={ref}>
