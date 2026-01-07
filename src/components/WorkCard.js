@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/WorkCard.css';
 import '../index.css';
+import Avatar from '@mui/material/Avatar';
+import CorporateFareIcon from '@mui/icons-material/CorporateFare';
 
 const WorkCard = ({props}) => {
     return (
@@ -8,7 +10,15 @@ const WorkCard = ({props}) => {
             <div className='row'>
                 <div className='column' id='work-picture'>
                     <div className='company-logo'>
-                        <img src = {props.companyImage} alt='work-image' id='work-image'/>
+                        {props.companyImage ?
+                        <img src = {props.companyImage} alt='work-image' id='work-image'/> :
+                        <Avatar alt='work-image' sx={{
+                            width: 120,
+                            height: 120
+                        }}>
+                            <CorporateFareIcon sx={{fontSize: 60}} />
+                        </Avatar>}
+                        
                     </div>                
                     <span className='company-name'>{props.companyName}</span>
                 </div>
