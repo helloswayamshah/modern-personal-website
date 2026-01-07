@@ -1,0 +1,26 @@
+[
+  {
+    "companyName": "AICG",
+    "workName": "Developer Intern",
+    "time": "July - September 2025",
+    "location": "USA (Remote)",
+    "description": ["Built config-driven Python ELT pipelines (PyODBC, Pandas, SQLAlchemy) on AWS for real-time and batch processing, integrating SQL Server/Oracle into an S3 data warehouse — improved data availability 3×, reduced manual integration 60%, and cut deployment effort 50%.",
+    "Owned major features of footage.ai(AI image/video platform) — implemented generation models, custom video editor, Cloudflare Workers, and AWS Lambda; optimized async workflows, reducing compute cost by 30%."]
+  },
+  {
+    "companyImage": "./assets/WorkXP/niyantras.png",
+    "companyName": "Niyantras LLC",
+    "workName": "Software Engineering Intern",
+    "time": "July - September 2023",
+    "location": "USA (Remote)",
+    "description": ["Worked on creating an Applicant Tracking System(ATS) Software for preventing Plagiarism and increasing Efficiency of an Online Coding round using Python, Third-Party REST API,and Java.", "This is going to be used for interviewing 100+ candidates a month and would be used by other businesses as an enterprise solution.", "Learned to make functional specifications and documentation documents for a new project/feature."]
+  },
+  {
+    "companyImage": "./assets/WorkXP/girlUP.png",
+    "companyName": "GIRL UP VADODARA",
+    "workName": "Volunteer",
+    "time": "March - December 2021",
+    "location": "Vadodara, IN",
+    "description": ["Created posts and graphics to spread awareness about women empowerment in India using designing software like Canva and Figma."]
+  }
+]

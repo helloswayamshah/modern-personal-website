@@ -25,13 +25,14 @@ function Education(props, ref) {
                         <h5>University of California, Santa Cruz</h5>
                         <span className="badge">Bachelor of Science</span>
                     </div>
-                    <div className="row">
+                    <div className="row" sx={{marginBottom: '4px !important' }}>
                         <span className="course"><i>Computer Science</i></span>
                         <span className="duration"><b>2022-2026 (expected)</b></span>
                     </div>
-
-                    <li><b>GPA: </b> {GPA}</li>
-                    <li>{dean}</li>
+                    <ul sx={{marginTop: '0px !important' }}>
+                        <li><b>GPA: </b> {GPA}</li>
+                        <li>{dean}</li>
+                    </ul>
                 </div>
             </div>
             ) : ((isMobile || isSmallTablet || isTabletScreen) && isPotrait) ? (
