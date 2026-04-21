@@ -1,7 +1,7 @@
 
 import "../styles/Education.css"
 import "../index.css"
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 

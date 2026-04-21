@@ -88,11 +88,11 @@ function ContactMe(props, ref) {
                 </div>
                 <span><b>My socials</b></span>
                 <div className="socials row">
-                    <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
-                    <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
-                    <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
-                    <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
-                    <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                    <a href="https://github.com/helloswayamshah" target="_blank" rel="noreferrer"><IoLogoGithub id='icon'/></a>
+                    <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoLinkedin id='icon'/></a>
+                    <a href="https://www.instagram.com/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoInstagram id='icon'/></a>
+                    <a href="https://x.com/helloswayamshah" target="_blank" rel="noreferrer"><FaXTwitter id='icon'/></a>
+                    <a href="https://discordapp.com/users/603192841770106890" target="_blank" rel="noreferrer"><FaDiscord id='icon'/></a>
                 </div>
             </div>
         </div>) : ((isMobile || isSmallTablet || isTabletScreen) && isPotrait) ? (
@@ -117,11 +117,11 @@ function ContactMe(props, ref) {
                     </div>
                     <span><b>My socials</b></span>
                     <div className="mobile-socials-row">
-                        <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
-                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
-                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
-                        <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
-                        <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                        <a href="https://github.com/helloswayamshah" target="_blank" rel="noreferrer"><IoLogoGithub id='icon'/></a>
+                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoLinkedin id='icon'/></a>
+                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoInstagram id='icon'/></a>
+                        <a href="https://x.com/helloswayamshah" target="_blank" rel="noreferrer"><FaXTwitter id='icon'/></a>
+                        <a href="https://discordapp.com/users/603192841770106890" target="_blank" rel="noreferrer"><FaDiscord id='icon'/></a>
                     </div>
                 </div>
             </div>
@@ -147,11 +147,11 @@ function ContactMe(props, ref) {
                     </div>
                     <span><b>My socials</b></span>
                     <div className="mobile-socials-row">
-                        <a href="https://github.com/helloswayamshah" target="_blank"><IoLogoGithub id='icon'/></a>
-                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank"><IoLogoLinkedin id='icon'/></a>
-                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank"><IoLogoInstagram id='icon'/></a>
-                        <a href="https://x.com/helloswayamshah" target="_blank"><FaXTwitter id='icon'/></a>
-                        <a href="https://discordapp.com/users/603192841770106890" target="_blank"><FaDiscord id='icon'/></a>
+                        <a href="https://github.com/helloswayamshah" target="_blank" rel="noreferrer"><IoLogoGithub id='icon'/></a>
+                        <a href="https://www.linkedin.com/in/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoLinkedin id='icon'/></a>
+                        <a href="https://www.instagram.com/helloswayamshah/" target="_blank" rel="noreferrer"><IoLogoInstagram id='icon'/></a>
+                        <a href="https://x.com/helloswayamshah" target="_blank" rel="noreferrer"><FaXTwitter id='icon'/></a>
+                        <a href="https://discordapp.com/users/603192841770106890" target="_blank" rel="noreferrer"><FaDiscord id='icon'/></a>
                     </div>
                 </div>
             </div>

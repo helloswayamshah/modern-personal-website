@@ -92,8 +92,8 @@ function Projects(props, ref) {
                 if (response.data[i].name === "helloswayamshah") {
                     continue;
                 }
-                var info = await fetchRepoInfo(response.data[i].name);
-                setProjects(projects => [...projects, info]);
+                const info = await fetchRepoInfo(response.data[i].name);
+                setProjects((projects) => [...projects, info]);
             }
         });
     };

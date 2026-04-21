@@ -26,7 +26,7 @@ function Profile(props, ref) {
                 <div className="information"><p>Hello! I am aspiring Software Engineering student studying Computer Science at University of California, Santa Cruz. I am an aspiring software engineer with a passion for problem-solving and building innovative solutions.</p></div>
             </div>
             <div className="resume">
-                    <a role="button" href={"./assets/Resume.pdf"} target="_blank"><IoDownloadOutline /> Download Resume</a>
+                    <a role="button" href={"./assets/Resume.pdf"} target="_blank" rel="noreferrer"><IoDownloadOutline /> Download Resume</a>
                 </div>
                 </div>
         </div>)
@@ -42,7 +42,7 @@ function Profile(props, ref) {
                     <div className="mobile-information"><p>Hello! I am aspiring Software Engineering student studying Computer Science at University of California, Santa Cruz. I am an aspiring software engineer with a passion for problem-solving and building innovative solutions.</p></div>
                 </div>
                 <div className="mobile-resume">
-                    <a role="button" href={"./assets/Resume.pdf"} target="_blank"><IoDownloadOutline /> Download Resume</a>
+                    <a role="button" href={"./assets/Resume.pdf"} target="_blank" rel="noreferrer"><IoDownloadOutline /> Download Resume</a>
                 </div>
             </div>
         </div>): (
@@ -54,7 +54,7 @@ function Profile(props, ref) {
                     <div className="mobile-information"><p>Hello! I am aspiring Software Engineering student studying Computer Science at University of California, Santa Cruz. I am an aspiring software engineer with a passion for problem-solving and building innovative solutions.</p></div>
                 </div>
                 <div className="mobile-resume">
-                    <a role="button" href={"./assets/Resume.pdf"} target="_blank"><IoDownloadOutline /> Download Resume</a>
+                    <a role="button" href={"./assets/Resume.pdf"} target="_blank" rel="noreferrer"><IoDownloadOutline /> Download Resume</a>
                 </div>
             </div>
         </div>)}
